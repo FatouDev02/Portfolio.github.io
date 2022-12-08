@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css%22%3E">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets/css/portfolio.css">  
 
@@ -21,7 +24,7 @@
 <header>
 
     <div class="user">
-        <img src="assets/images/IMG_3293 2.jpg" alt="">
+        <img src="assets/images/fc.jpg" alt="">
         <h3 class="name">Fatoumata COULIBALY</h3>
         <p class="post">Developpeur Junior </p>
     </div>
@@ -57,7 +60,9 @@
           Je suis Responsable,dynamique,autaunome
          ,motivée et persuadée que je dispose de toutes les compétences et atouts pour repondre aux bésoins de votre Entreprise.
         </p>
-    <a href="#about"><button class="btnn">A propos <i class="fas fa-user"></i></button></a>
+    <!-- <a href="#about"><button class="btnn">A propos <i class="fas fa-user"></i></button> </a> -->
+   <span>  <a href="#about" style="color: #FFFFFF;" class="btnn">A propos   <i class="fas fa-user"></i> </a>
+  </span>
 
 </section>
 
@@ -77,10 +82,7 @@
         <h3> <span> Diplôme : </span> Licence </h3>
         <h3> <span> Poste : </span> Developpeur Junior </h3>
         <h3> <span> Language : </span> Francais </h3>
-        <a href="assets/doc/MONCV_OFFICILLE.pdf" download="" > <button class="btnn" > Télécharger mon CV  <i class="fas fa-download"></i> </button></a>
-         
-            
-     
+        <a href="assets/doc/MONCV_OFFICILLE.pdf" download=""  class="btnn" >  Télécharger mon CV  <i class="fas fa-download"></i> </a>
          
 
     </div>
@@ -177,7 +179,7 @@
 <!-- portfolio section starts  -->
 
 
-<section class="portfolio" id="portfolio">
+<section class="portfolio" >
 
 <h1 class="heading"> Expériences <span> professionnelles</span> </h1>
 
@@ -220,7 +222,7 @@
 </section>
 
 <!-- Skill 1 - HCF Bootstrap 5 Component  "bg-light py-5 py-xl-6"-->
-<section class="portfolio" id="portfolio">
+<section class="portfolio">
     <div class="container">
         <div class="row responsive">
             <div class="col-md-12">
@@ -338,13 +340,12 @@
     </div>
 
 
-    <form action="">
+    <form >
         <h3 class="title" style="font-size:2rem; color:#ffbb33 "> Commentaires:</h3>
 
-        <input type="text" placeholder="Nom et Prénom" class="box">
-        <input type="email" placeholder="email" class="box">
-        <input type="text" placeholder="Sujet" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
+        <input type="text" placeholder="Nom et Prénom" class="box" required>
+         <input type="text" placeholder="Sujet" class="box" required>
+        <textarea name="m" id="m" cols="30" rows="10" class="box message" placeholder="Message" required></textarea>
         <button type="submit" class="btnn"> Envoyer <i class="fas fa-paper-plane"></i> </button>
 
     </form>
