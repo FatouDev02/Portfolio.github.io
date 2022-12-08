@@ -17,6 +17,14 @@ $(document).ready(function(){
       }
   
     });
+    ///////:animmm
+    var typed = new Typed(".typing1", {
+      strings: ["F", "CCC", "FCFC"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+   
   
     // smooth scrolling 
   
@@ -35,7 +43,10 @@ $(document).ready(function(){
   
     });
   
-  });
+  } 
+  
+  );
+  
 
   function makesvg(percentage, inner_text=""){
 
@@ -86,19 +97,7 @@ $(document).ready(function(){
 
 
 /////////////////////////////
-window.onload = function () {
-    document.getElementById("download")
-        .addEventListener("click", () => {
-            const abs = this.document.getElementById("abs");
-            console.log(abs);
-            console.log(window);
-            var opt = {
-                margin: 1,
-                filename: 'myfile.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-            html2pdf().from(abs).set(opt).save();
-        })
-}
+/**
+   * Hero type effect
+   */
+ 
