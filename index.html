@@ -16,6 +16,21 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets/css/portfolio.css">  
 
+
+    
+  <script src="index.js"></script>
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("5EEuniRJpBzWJ_gW2");
+    })();
+  </script>
+
+
 </head>
 <body>
     
@@ -331,8 +346,6 @@
             <h3> <i class="fas fa-phone"></i> +223 9091 6715</h3>
             <h3> <a href="https://github.com/FatouDev02/" style="color: #ffffff;"> <i  class="fa fa-github"></i>Github</a></h3>
             <h3> <a href="https://www.linkedin.com/in/fatoumata-coulibaly-22629922b/" style="color: #ffffff;"> <i class="fa fa-linkedin"></i>Linkedin</a></h3>
-            <h3> <a href="https://discord.com/channels/FCDev02#5617" style="color: #ffffff;"> <i class="fa fa-Discord" ></i>Discord</a></h3>
-
 
             <h3> <i class="fas fa-map-marker-alt"></i> Mali, Kati - 4004. </h3>
         </div>
@@ -343,10 +356,10 @@
     <form >
         <h3 class="title" style="font-size:2rem; color:#ffbb33 "> Commentaires:</h3>
 
-        <input type="text" placeholder="Nom et Prénom" class="box" required>
-         <input type="text" placeholder="Sujet" class="box" required>
-        <textarea name="m" id="m" cols="30" rows="10" class="box message" placeholder="Message" required></textarea>
-        <button type="submit" class="btnn"> Envoyer <i class="fas fa-paper-plane"></i> </button>
+        <input type="text" id="name" placeholder="Nom et Prénom" class="box" required>
+         <input type="email"  id="email" placeholder="Email" class="box" required>
+        <textarea  id="message" cols="30" rows="10" class="box message" placeholder="Message" required></textarea>
+        <button type="submit" class="btnn" onclick="sendMail()"> Envoyer <i class="fas fa-paper-plane"></i> </button>
 
     </form>
 
@@ -372,6 +385,58 @@
 <!-- custom js file link  -->
 <script src="assets/js/portfolio.js"></script>
 
+
+
+
+
+<script> 
+function sendMail(){
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+  
+    };
+    const serviceID= "service_rppa13m";
+   const templateID= "template_tsp0z5p";
+   emailjs.send(serviceID,templateID,params).then(
+    res=>{
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Votre message a été envoyé avec Succès")
+  
+    }).catch(err=>console.log(err))
+  }
+</script>
+
+
+
+<script>
+    function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_rppa13m";
+  const templateID = "template_tsp0z5p";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
+</script>
 
 </body>
 </html>

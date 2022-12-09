@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
     ///////:animmm
     var typed = new Typed(".typing1", {
-      strings: ["F", "CCC", "FCFC"],
+      strings: ["null","Développeur Web", "Développeur Mobile", "Développeur FullStack"],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true
@@ -77,7 +77,9 @@ $(document).ready(function(){
     
     return svg
   }
+  /////////////////send
   
+ /////////////////////send  
   (function( $ ) {
   
       $.fn.circlechart = function() {
